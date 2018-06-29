@@ -15,6 +15,8 @@ public class Esempio {
 		s.aggiungiCorsia("Sughi", 3000);
 		s.aggiungiCorsia("Prodotti vari", 10500);
 		
+		System.out.println(s.getCorsie().toString());
+		
 		Prodotto p1 = s.catalogaProdotto("BAR0500RIG", "Rigatoni Barilla 1000g",1000, false);
 
 		p1.setPrezzoListino(0.8);
@@ -25,6 +27,9 @@ public class Esempio {
 		
 		Prodotto p3 = s.catalogaProdotto("BUI0000PES", "Pesto Buitoni 125g",250, true);
 		p3.setPrezzoListino(2.30);
+		
+		
+		System.out.println("\n" + s.elencoProdotti().toString());
 
 		((ProdottoDaFrigo) p3).setTemperaturaDiConservazione(4);
 		
